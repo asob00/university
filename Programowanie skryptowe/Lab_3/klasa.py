@@ -1,5 +1,11 @@
 class Klasa(object):
-    def __init__(self):
+
+    tab = [1, 2, 3]
+
+    def __init__(self, t, a, b):
+        self.tab = t
+        self._zmienna1 = a
+        self.__zmienna2 = b
         print("Wywołano metodę '__init__()'")
 
     def __del__(self):
@@ -10,6 +16,8 @@ class Klasa(object):
 
     def metodaInstancyjna(self):
         print("Wywołano metodę 'metodaInstancyjna()'")
+        print(Klasa.tab)
+        print(self.tab)
 
     @classmethod
     def metodaKlasowa(cls):
